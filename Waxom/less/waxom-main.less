@@ -7,10 +7,12 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
+
 }
 
 .row {
-    width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
 
 button {
@@ -49,10 +51,21 @@ button:focus,
     }
 }
 
+/* Default button settings*/
+.arrow(@size, @rotation) {
+    width: @size;
+    height: @size;
+    border-top: 2px solid @main-gray;
+    border-right: 2px solid @main-gray;
+
+    transform: rotateZ(@rotation)
+}
+
 
 /*  Colors  */
 @main-white: #fff;
 @main-dark: #555555;
+@main-gray: #a3a2a0;
 @main-brown: #c7b299;
 @main-button-color: #998675;
 
@@ -63,14 +76,17 @@ button:focus,
     padding-top: 4rem;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     &-logo {
         display: flex;
         align-items: center;
-        text-align: center;
+        justify-content: center;
+
+        width: 100%;
 
         &-name {
-            font-size: 3em;
+            font-size: 4rem;
             color: @main-white;
 
             display: inline-block;
@@ -80,12 +96,15 @@ button:focus,
 
     .navigation-main {
         display: flex;
+        max-width: 100%;
 
         .navigation {
             display: flex;
             margin: auto 0;
             width: 100%;
             justify-content: space-between;
+            text-align: center;
+
 
             &-item {
                 color: @main-white;
@@ -132,28 +151,92 @@ button:focus,
 
 /*  Main  */
 .main {
-    height: 80vh;
-    background: #fff url('../img/main/bg.jpg') top center no-repeat;
-    overflow: hidden;
-    background-size: 100% auto;
-
+    height: 100vh;
+    max-width: 100vw;
     text-align: center;
 
-    position: relative;
 
-    .main-content-container {
+    .bg-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 100%;
-        display: flex;
+        width: 100%;
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        .slick-list {
+            height: 100%;
+            width: 100%;
+        }
+
+
+        &-item {
+            width: 100%;
+            min-height: 1024px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            overflow: hidden;
+        }
+
+        .item {
+            &-1 {
+                background-image: url('../img/main/bg-1.jpg');
+            }
+
+            &-2 {
+                background-image: url('../img/main/bg-2.jpg');
+            }
+
+            &-3 {
+                background-image: url('../img/main/bg-3.jpg');
+            }
+
+            &-4 {
+                background-image: url('../img/main/bg-4.jpg');
+            }
+
+            &-5 {
+                background-image: url('../img/main/bg-5.jpg');
+            }
+
+        }
+
+        .slick-arrow {
+            font-size: 7rem;
+            color: @main-white;
+
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+        }
+
+        .arrow-right {
+            .arrow(3.5rem, 45deg);
+            right: 10%;
+        }
+
+        .arrow-left {
+            .arrow(3.5rem, 225deg);
+            left: 10%;
+        }
     }
+
 
     &-content {
         text-align: center;
         color: @main-white;
+        width: 100%;
+
 
         position: absolute;
-        top: 35%;
-        transform: translateY(-35%);
-        
+        top: 30%;
+        transform: translateY(-30%);
+
         left: 50%;
         transform: translateX(-50%);
 
@@ -167,17 +250,52 @@ button:focus,
             font-size: 5.2rem;
             font-weight: 700;
         }
-        
-        &-text{
+
+        &-text {
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
-            
+
             margin-top: 3rem;
         }
-        
-        .get_started-button{
+
+        .get_started-button {
             .button(@main-white, @main-button-color);
             margin-top: 5.5rem;
+        }
+    }
+}
+
+
+/* Services */
+.services {
+    padding: 6rem 0;
+    text-align: center;
+
+    &-slider {
+        &-item {
+            padding: 1.5rem;
+
+            .slider-icon {
+                font-size: 5rem;
+                color: @main-dark;
+            }
+
+            .slider-title {
+                font-size: 2.2rem;
+                font-weight: 600;
+                color: @main-dark;
+
+                margin-top: 2.5rem;
+            }
+
+            .slider-text {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 300;
+
+                color: @main-gray;
+
+                margin-top: 1.5rem;
+            }
         }
     }
 }
@@ -199,3 +317,101 @@ button:focus,
 
 
 
+
+
+
+
+
+
+
+/*  -------- MEDIA QUERIES ---------  */
+
+/*  ------------ Laptop ------------  */
+/*  --------------------------------  */
+@media screen and (max-width: 1440px) {}
+
+
+/*  ------------ Tablet ------------  */
+/*  --------------------------------  */
+@media screen and (max-width: 780px) {
+
+    /*  Header  */
+    .header {
+        .navigation {
+            margin-top: 2rem !important;
+            display: block !important;
+
+            &-item {
+                margin-left: 2rem;
+            }
+        }
+
+        .cart-main {
+            padding: 0;
+        }
+    }
+}
+
+
+
+/*  ------------ Mobile ------------  */
+/*  --------------------------------  */
+@media screen and (max-width: 340px) {
+    html {
+        font-size: 7px;
+    }
+
+    /*  Header  */
+    .header {
+        &-logo {
+            &-img {
+                transform: scale(0.7, 0.7)
+            }
+
+            &-name {
+                font-size: 3rem;
+            }
+        }
+
+        .navigation {
+            margin-top: 2rem !important;
+            display: block !important;
+
+            &-item {
+                margin-left: 2rem;
+            }
+        }
+
+        .cart {
+            display: none !important;
+        }
+    }
+
+    /*  Main  */
+    .main {
+        .bg-slider {
+            .arrow-right {
+                .arrow(2.5rem, 45deg);
+                right: 7%;
+            }
+
+            .arrow-left {
+                .arrow(2.5rem, 225deg);
+                left: 7%;
+            }
+        }
+
+        &-content {
+            top: 35%;
+
+            &-suptitle {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            &-title {
+                font-size: 4rem;
+            }
+        }
+    }
+}
