@@ -35,6 +35,7 @@ a:hover {
 }
 .section-header .section-description {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
   font-weight: 300;
   color: #a3a2a0;
   margin-top: 2rem;
@@ -139,9 +140,6 @@ a:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 .main .bg-slider .slick-list {
   height: 100%;
@@ -539,6 +537,70 @@ a:hover {
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
   border-bottom: 15px solid #362f2d;
+}
+.projects-button-main {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.projects-button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #998675;
+  padding: 2rem 3rem;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+.projects-button:hover {
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+}
+/*  Video Presentation  */
+.presentation {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #a3a2a0 url('../img/presentation/bg.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 705px;
+}
+.presentation-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.presentation-play_button {
+  margin-bottom: 5rem;
+}
+.presentation .section-header,
+.presentation .section-title,
+.presentation .section-description {
+  color: #ffffff;
+}
+.presentation-time {
+  margin-top: 4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #c7b299;
 }
 /*  -------- MEDIA QUERIES ---------  */
 /*  ------------ Laptop ------------  */
