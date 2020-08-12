@@ -28,6 +28,24 @@ a {
 }
 
 
+/*  Color MixIns  */
+.tone(@property, @colors, @tones: 1, @value: color) {
+    @step: 16;
+    @red: red(@colors) + (@step * @tones);
+    @green: green(@colors) + (@step * @tones);
+    @blue: blue(@colors) + (@step * @tones);
+    @color: rgb(@red, @green, @blue);
+    @{property}: @@value;
+}
+
+.lighter(@property, @color, @tones: 1) {
+    .tone(@property, @color, @tones);
+}
+
+.darker(@property, @colors, @tones: 1) {
+    .tone(@property, @colors, @tones*(-1));
+}
+
 /* Default button settings*/
 .button(@text-color, @bg-color,
     @vertical_padding: 2rem, @horiaontal_padding: 3rem) {
@@ -613,43 +631,166 @@ a {
 /*  Video Presentation  */
 .presentation {
     margin-top: 5rem;
-    
+
     display: flex;
     align-items: center;
-    
+
     background: @main-gray url('../img/presentation/bg.jpg');
-    
+
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    
+
     min-width: 100%;
     min-height: 705px;
-    
-    &-main{
+
+    &-main {
         display: flex;
         align-items: center;
     }
-    
-    &-play_button{
+
+    &-play_button {
         margin-bottom: 5rem;
+
+        &:hover {
+            transition: all .1s linear;
+            transform: scale(1.2, 1.2);
+        }
     }
-    
-    
+
+
     .section-header,
     .section-title,
     .section-description {
         color: @main-white;
     }
-    
-    &-time{
+
+    &-time {
         margin-top: 4rem;
-        
+
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         color: @main-brown;
     }
 }
+
+
+/*  Excellent for Mobile Devices  */
+.mobile {
+    .darker(background-color, @main-white, 0.5);
+
+    &-image {
+        margin-top: 8rem;
+    }
+
+
+    .mobile-accordion-main {
+        display: flex;
+        align-items: center;
+    }
+
+    &-accordion {
+        height: 55rem;
+
+        &-header {
+
+            .header-title {
+                font-size: 3rem;
+                font-weight: 600;
+                color: @main-dark
+            }
+
+            .header-text {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 300;
+                .darker(color, @main-gray, 4);
+
+                margin-top: 4rem;
+            }
+        }
+
+
+        .accordion {
+            margin: 4rem 0 0 10rem;
+
+            .card {
+                border: none;
+                margin-bottom: 1.5rem;
+                overflow: visible;
+
+                background-color: transparent;
+
+                &-header {
+                    background-color: transparent;
+                    border: none;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                    .darker(color, @main-gray, 4);
+
+                    position: relative;
+
+                    &:before,
+                    &:after {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -4rem;
+
+
+                        content: "";
+                    }
+
+                    &:before {
+                        border: 0.6rem solid transparent;
+                        border-left: 0.6rem solid @main-white;
+                        z-index: 5;
+                    }
+
+                    &:after {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-radius: 50%;
+                        left: -5rem;
+                        z-index: 4;
+
+                        background-color: @main-brown
+                    }
+                }
+
+                &-body {
+                    padding: 1.5rem;
+                }
+
+                .faq-link[aria-expanded="true"] {
+                    .accordion-header {
+                        &:before {
+                            transition: all .1s linear;
+                            transform-origin: 50% 25%;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+                .faq-link[aria-expanded="false"] {
+                    .accordion-header {
+                        &:before {
+                            transition: all .1s linear;
+                            transform: rotate(0deg) translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -687,7 +828,7 @@ a {
 
 /*  ------------ Tablet ------------  */
 /*  --------------------------------  */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1025px) {
 
     /*  Header  */
     .header {
@@ -749,6 +890,33 @@ a {
 
         &-description {
             font-size: 1.4rem;
+        }
+    }
+
+    /*  Excellent for Mobile Devices  */
+    .mobile {
+        &-image {
+            display: none;
+        }
+
+
+        .mobile-accordion-main {
+            display: flex;
+            align-items: center;
+        }
+
+        &-accordion {
+            height: 73rem;
+
+            &-header {
+                text-align: center;
+                margin-top: 4rem;
+            }
+
+
+            .accordion {
+                margin: 4rem 0 0 5rem;
+            }
         }
     }
 }
@@ -917,7 +1085,15 @@ a {
                     }
                 }
             }
+        }
+    }
 
+    /*  Excellent for Mobile Devices  */
+    .mobile {
+
+        &-accordion {
+            min-height: 95rem;
+            padding-bottom: 3rem;
         }
     }
 }

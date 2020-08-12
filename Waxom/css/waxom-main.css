@@ -21,6 +21,7 @@ a:hover {
   padding: 0;
   margin: 0;
 }
+/*  Color MixIns  */
 /* Default button settings*/
 /* Default arrow settings*/
 /* Default section header settings*/
@@ -591,6 +592,12 @@ a:hover {
 .presentation-play_button {
   margin-bottom: 5rem;
 }
+.presentation-play_button:hover {
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
 .presentation .section-header,
 .presentation .section-title,
 .presentation .section-description {
@@ -601,6 +608,91 @@ a:hover {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: #c7b299;
+}
+/*  Excellent for Mobile Devices  */
+.mobile {
+  background-color: #f7f7f7;
+}
+.mobile-image {
+  margin-top: 8rem;
+}
+.mobile .mobile-accordion-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mobile-accordion {
+  height: 55rem;
+}
+.mobile-accordion-header .header-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #555555;
+}
+.mobile-accordion-header .header-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #636260;
+  margin-top: 4rem;
+}
+.mobile-accordion .accordion {
+  margin: 4rem 0 0 10rem;
+}
+.mobile-accordion .accordion .card {
+  border: none;
+  margin-bottom: 1.5rem;
+  overflow: visible;
+  background-color: transparent;
+}
+.mobile-accordion .accordion .card-header {
+  background-color: transparent;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #636260;
+  position: relative;
+}
+.mobile-accordion .accordion .card-header:before,
+.mobile-accordion .accordion .card-header:after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -4rem;
+  content: "";
+}
+.mobile-accordion .accordion .card-header:before {
+  border: 0.6rem solid transparent;
+  border-left: 0.6rem solid #ffffff;
+  z-index: 5;
+}
+.mobile-accordion .accordion .card-header:after {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  left: -5rem;
+  z-index: 4;
+  background-color: #c7b299;
+}
+.mobile-accordion .accordion .card-body {
+  padding: 1.5rem;
+}
+.mobile-accordion .accordion .card .faq-link[aria-expanded="true"] .accordion-header:before {
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  -webkit-transform-origin: 50% 25%;
+          transform-origin: 50% 25%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.mobile-accordion .accordion .card .faq-link[aria-expanded="false"] .accordion-header:before {
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  -webkit-transform: rotate(0deg) translateY(-50%);
+          transform: rotate(0deg) translateY(-50%);
 }
 /*  -------- MEDIA QUERIES ---------  */
 /*  ------------ Laptop ------------  */
@@ -623,7 +715,7 @@ a:hover {
 }
 /*  ------------ Tablet ------------  */
 /*  --------------------------------  */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1025px) {
   /*  Header  */
   .header .navigation-main .navigation {
     margin-top: 4rem;
@@ -671,6 +763,28 @@ a:hover {
   }
   .offer-description {
     font-size: 1.4rem;
+  }
+  /*  Excellent for Mobile Devices  */
+  .mobile-image {
+    display: none;
+  }
+  .mobile .mobile-accordion-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mobile-accordion {
+    height: 73rem;
+  }
+  .mobile-accordion-header {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .mobile-accordion .accordion {
+    margin: 4rem 0 0 5rem;
   }
 }
 /*  ------------ Mobile ------------  */
@@ -851,5 +965,10 @@ a:hover {
   .projects-content .content-block-image img {
     height: 100%;
     width: 100%;
+  }
+  /*  Excellent for Mobile Devices  */
+  .mobile-accordion {
+    min-height: 95rem;
+    padding-bottom: 3rem;
   }
 }
