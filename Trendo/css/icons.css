@@ -1,0 +1,70 @@
+.gifts-icon {
+  background-image: url('../img/rates/gift.svg');
+  min-width: 27px;
+  min-height: 27px;
+}
+.tick-icon {
+  background-image: url('../img/rates/tick.svg');
+  min-width: 15px;
+  min-height: 15px;
+}
+.startup-icon {
+  background-image: url('../img/rates/startup.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.commerce-icon {
+  background-image: url('../img/rates/commerce-and-shopping.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.product-icon {
+  background-image: url('../img/rates/product.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.qr-icon {
+  background-image: url('../img/rates/qr-code.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.payment-icon {
+  background-image: url('../img/rates/online-payment.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.analysis-icon {
+  background-image: url('../img/rates/analysis.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.update-icon {
+  background-image: url('../img/rates/update.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.content-icon {
+  background-image: url('../img/rates/content.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.awareness-icon {
+  background-image: url('../img/rates/awareness.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.branding-icon {
+  background-image: url('../img/rates/branding.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.logistic-icon {
+  background-image: url('../img/rates/logistic.svg');
+  min-width: 30px;
+  min-height: 30px;
+}
+.app-icon {
+  background-image: url('../img/rates/app.svg');
+  min-width: 30px;
+  min-height: 30px;
+}

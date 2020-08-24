@@ -1,0 +1,262 @@
+/*  Default settings  */
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.5rem;
+  color: #332f2c;
+}
+p {
+  margin: 0;
+}
+.row {
+  max-width: 100%;
+  margin: 0;
+}
+button {
+  border: none;
+}
+button:focus,
+.slick-slide:focus {
+  outline: none;
+}
+.no-indent {
+  padding: 0;
+  margin: 0;
+}
+.red_text {
+  color: #e30d41;
+  font-weight: 700;
+}
+/* Default button settings*/
+.buy_now-button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #e30d41;
+  padding: 1.5rem 3rem;
+  border: 2px solid transparent;
+  border-radius: 1000px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+.buy_now-button:hover {
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+.item-icon {
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 1rem;
+}
+/*  Colors  */
+/*  Header  */
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 0 1rem 0;
+}
+/*  Info  */
+.info {
+  background-color: #332f2c;
+}
+.info-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.info-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.info-list-item .item-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url('../img/info/analysis.svg');
+  margin-right: 1rem;
+}
+.info-list-item .item-text {
+  color: #fff;
+  margin: 1rem 0;
+}
+/*  Main  */
+.main {
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
+.main .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-content-title {
+  font-size: 5rem;
+  line-height: 1.1;
+}
+.main-content-statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5rem;
+}
+.main-content-statistics .statistisc-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 2rem;
+}
+.main-content-statistics .statistisc-item .item-icon {
+  margin-right: 2rem;
+  width: 63px;
+}
+.main-content-statistics .statistisc-item .icon-1 {
+  background-image: url('../img/main/economic.svg');
+}
+.main-content-statistics .statistisc-item .icon-2 {
+  background-image: url('../img/main/screen.svg');
+}
+.main-content-statistics .statistisc-item .item-text {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.main-content-button {
+  margin-top: 6rem;
+}
+.main-image {
+  width: 100%;
+  height: auto;
+}
+/*  Rate  */
+.rate {
+  background-color: #fff0ed;
+  padding: 7rem 0;
+}
+.rate-item {
+  margin-top: 3rem;
+  padding: 2rem 2rem 6rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 1px solid #898989;
+  min-height: 740px;
+  position: relative;
+}
+.rate-item-bottom {
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+}
+.rate-item-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.rate-item-advantages {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 4rem;
+}
+.rate-item-advantages .advantages-item {
+  width: 46%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+  margin-right: 4%;
+}
+.rate-item-advantages .advantages-item .item-text {
+  line-height: 1.1;
+  max-height: 100%;
+}
+.rate-item-gifts .gifts-header,
+.rate-item-gifts .gifts-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.rate-item-gifts .gifts-header {
+  margin-bottom: 1rem;
+}
+.rate-item-prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 1;
+  margin-top: 3rem;
+}
+.rate-item-prices .item-start_price {
+  max-width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.rate-item-prices .item-start_price .start_price-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0.7rem;
+}
+.rate-item-prices .item-surroprt_price {
+  max-width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.rate-item-prices .item-surroprt_price .start_price-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0.5rem;
+}
+.rate-item-button {
+  text-align: center;
+  margin-top: 5rem;
+}
