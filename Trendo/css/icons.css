@@ -1,3 +1,15 @@
+/*  Main  */
+.economic-icon {
+  background-image: url('../img/main/economic.svg');
+  min-width: 50px;
+  min-height: 50px;
+}
+.screen-icon {
+  background-image: url('../img/main/screen.svg');
+  min-width: 50px;
+  min-height: 50px;
+}
+/*  Rates  */
 .gifts-icon {
   background-image: url('../img/rates/gift.svg');
   min-width: 27px;
@@ -67,4 +79,55 @@
   background-image: url('../img/rates/app.svg');
   min-width: 30px;
   min-height: 30px;
+}
+/*  Choise  */
+.ecommerce-icon {
+  background-image: url('../img/choise/ecommerce1.svg');
+  min-width: 50px;
+  min-height: 50px;
+}
+.commerce-icon2 {
+  background-image: url('../img/choise/commerce-and-shopping2.svg');
+  min-width: 50px;
+  min-height: 50px;
+}
+.development-icon {
+  background-image: url('../img/choise/development1.svg');
+  min-width: 50px;
+  min-height: 50px;
+}
+/*  Shops  */
+.personal-care-icon {
+  background-image: url('../img/shops/personal-care.svg');
+  min-width: 50px;
+  min-height: 50px;
+}
+.stroller-icon {
+  background-image: url('../img/shops/stroller.svg');
+  min-width: 50px;
+  min-height: 50px;
+}
+.kitchen-icon {
+  background-image: url('../img/shops/kitchen.svg');
+  min-width: 50px;
+  min-height: 50px;
+}
+.under-construction-icon {
+  background-image: url('../img/shops/under-construction.svg');
+  min-width: 50px;
+  min-height: 50px;
+}
+.arrow-next-icon {
+  background-image: url('../img/shops/arrow.svg');
+  min-width: 30px;
+  min-height: 30px;
+  -webkit-transform: scale(-1, 1) translateY(-50%);
+          transform: scale(-1, 1) translateY(-50%);
+}
+.arrow-prev-icon {
+  background-image: url('../img/shops/arrow.svg');
+  min-width: 30px;
+  min-height: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }

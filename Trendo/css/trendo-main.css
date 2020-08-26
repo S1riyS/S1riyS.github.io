@@ -16,7 +16,7 @@ p {
 button {
   border: none;
 }
-button:focus,
+a:focus,
 .slick-slide:focus {
   outline: none;
 }
@@ -28,11 +28,18 @@ button:focus,
   color: #e30d41;
   font-weight: 700;
 }
+.section-header {
+  text-align: center;
+  margin-top: 6rem;
+}
+.section-header .section-title {
+  font-weight: 700;
+  font-size: 4rem;
+}
 /* Default button settings*/
 .buy_now-button {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
   color: #ffffff;
   background-color: #e30d41;
   padding: 1.5rem 3rem;
@@ -40,11 +47,35 @@ button:focus,
   border-radius: 1000px;
   -webkit-transition: all .1s linear;
   transition: all .1s linear;
+  -webkit-box-shadow: 0px 0px 30px -3px #e30d41;
+          box-shadow: 0px 0px 30px -3px #e30d41;
+  font-size: 2rem;
 }
 .buy_now-button:hover {
   text-decoration: none;
   color: #ffffff;
-  border: 2px solid #ffffff;
+}
+.buy_now-button:hover {
+  background-color: #a82a49;
+  -webkit-box-shadow: 0px 0px 30px -3px #a82a49;
+          box-shadow: 0px 0px 30px -3px #a82a49;
+}
+.view-button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #332f2c;
+  background-color: #ffffff;
+  padding: 1.5rem 3rem;
+  border: 2px solid transparent;
+  border-radius: 1000px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  border: 2px solid #332f2c;
+  padding: 1rem 3rem;
+}
+.view-button:hover {
+  text-decoration: none;
+  color: #332f2c;
 }
 .item-icon {
   display: inline-block;
@@ -137,12 +168,6 @@ button:focus,
 .main-content-statistics .statistisc-item .item-icon {
   margin-right: 2rem;
   width: 63px;
-}
-.main-content-statistics .statistisc-item .icon-1 {
-  background-image: url('../img/main/economic.svg');
-}
-.main-content-statistics .statistisc-item .icon-2 {
-  background-image: url('../img/main/screen.svg');
 }
 .main-content-statistics .statistisc-item .item-text {
   font-size: 2rem;
@@ -259,4 +284,129 @@ button:focus,
 .rate-item-button {
   text-align: center;
   margin-top: 5rem;
+}
+/*  Choise  */
+.choise-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 4rem;
+}
+.choise-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.choise-list-item .item-icon {
+  margin-right: 2rem;
+}
+.choise-list-item .item-text {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+/*  Shops  */
+.shops-slider {
+  margin: 3rem 0 8rem;
+  position: relative;
+}
+.shops-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  margin: 0;
+}
+.shops-slider .arrow-prev-icon {
+  left: -3rem;
+}
+.shops-slider .arrow-next-icon {
+  right: -3rem;
+}
+.shops-slider .slider-item {
+  text-align: center;
+  padding: 4rem 0;
+  margin: 0 1.5rem;
+  border: 1px solid #898989;
+  border-radius: 10px;
+}
+.shops-slider .slider-item .item-icon {
+  margin: 0;
+}
+.shops-slider .slider-item .item-text {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.shops-slider .slider-item .item-button {
+  margin-top: 3rem;
+}
+/*  Offer  */
+.offer {
+  background-color: #fff0ed;
+  padding: 6rem 0rem;
+}
+.offer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.offer-content-title {
+  font-size: 3.5rem;
+  margin-right: 8rem;
+}
+.offer-content-statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.offer-content-statistics .statistisc-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8rem;
+}
+.offer-content-statistics .statistisc-item .item-text {
+  font-size: 2rem;
+}
+.offer-button {
+  margin-top: 5rem;
+}
+/*  Additionally  */
+.additionally-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 4rem 0 3rem;
+}
+.additionally-content .content-item {
+  border-radius: 5px;
+  max-width: 20%;
+  margin: 1.5rem;
+}
+.additionally-content .content-item .item-img {
+  width: 100%;
+}
+/*  Footer  */
+.footer {
+  background-color: #332f2c;
+  text-align: center;
+  padding: 2rem 0;
+}
+.footer-text {
+  color: #fff;
 }
